@@ -34,6 +34,7 @@ h2 {
   color: aliceblue;
   transition: 0.3s;
   display: none;
+  margin: 0 auto;
 }
 
 :hover.btn,
@@ -50,4 +51,12 @@ h2 {
 
 h3 {
   margin-top: 40px;
+}
+
+.correct {
+  background: #67c6a6;
+}
+
+.incorrect {
+  background: #f29f9f;
 }

@@ -36,3 +36,44 @@ let questions = [
     ],
   },
 ];
+let displayQuestion = document.getElementById("question");
+let displayAnswer = document.getElementById("answer-buttons");
+let displayNext = document.getElementById("next-btn");
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  displayNext.innerHTML = "Next";
+  showQuestion();
+}
+
+function showQuestion() {
+  let currentQuestion = questions[currentQuestionIndex];
+  let questionNumber = currentQuestionIndex + 1;
+  displayQuestion.innerHTML = `${questionNumber}. ${currentQuestion.question}`;
+
+  currentQuestion.answers.forEach((answer) => {
+    let button = document.querySelector(".btn");
+    button.innerHTML = answer.text;
+    displayAnswer.appendChild(button);
+    if (answer.correct) {
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener("click", selectAnswer);
+  });
+}
+
+function selectAnswer(event) {
+  let clickBtn = event.target;
+  let correctAnswer = clickBtn.dataset.correct === "true";
+  if (correctAnswer) {
+    clickBtn.classList.add("correct");
+  } else {
+    clickBtn.classList.add("incorrect");
+  }
+}
+
+startQuiz();
