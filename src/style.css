@@ -14,7 +14,7 @@ h2 {
 .btn {
   margin: 10px;
   border-radius: 25px;
-  width: 75%;
+  width: 50%;
   height: 50px;
   font-size: 24px;
   background-color: rgb(96, 114, 217);
@@ -58,7 +58,7 @@ h3 {
   background-color: rgb(96, 114, 217);
   cursor: no-drop;
 }
-.correct,
+
 .btn.correct {
   background: #67c6a6;
 }
