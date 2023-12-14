@@ -35,6 +35,16 @@ let questions = [
       { text: "81", correct: true },
     ],
   },
+
+  {
+    question: "What is 10²?",
+    answers: [
+      { text: "20", correct: false },
+      { text: "100", correct: true },
+      { text: "1000", correct: false },
+      { text: "1", correct: false },
+    ],
+  },
 ];
 let displayQuestion = document.getElementById("question");
 let displayAnswer = document.getElementById("answer-buttons");
