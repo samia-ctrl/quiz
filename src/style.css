@@ -67,3 +67,9 @@ h3 {
 .incorrect {
   background: #f29f9f;
 }
+
+@media (max-width: 576px) {
+  body {
+    padding: 20px;
+  }
+}
